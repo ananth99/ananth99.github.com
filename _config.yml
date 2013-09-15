@@ -8,7 +8,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : Ananth Madhavan
 tagline: Site Tagline
 author :
   name : Ananth Madhavan
@@ -16,6 +16,7 @@ author :
   github : ananth99
   twitter : AnanthMadhavan
   facebook : ananth.madhavan
+  linkedin : profile/view?id=133303876&trk=tab_pro
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

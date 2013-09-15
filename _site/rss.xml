@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-        <title>Jekyll Bootstrap</title>
-        <description>Jekyll Bootstrap - Ananth Madhavan</description>
+        <title>Ananth Madhavan</title>
+        <description>Ananth Madhavan - Ananth Madhavan</description>
         <link>http://ananth99.github.io</link>
         <link>http://ananth99.github.io</link>
-        <lastBuildDate>2013-09-13T01:03:32+05:30</lastBuildDate>
-        <pubDate>2013-09-13T01:03:32+05:30</pubDate>
+        <lastBuildDate>2013-09-13T19:45:23+05:30</lastBuildDate>
+        <pubDate>2013-09-13T19:45:23+05:30</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
                 <title>Hello World</title>
-                <description></description>
+                <description>&lt;h2 id='hi_there'&gt;Hi, there!&lt;/h2&gt;
+
+&lt;p&gt;Welcome to my personal blog! I am Ananth Madhavan, an Engineering undergrad from India. Man on a mission to build something useful and productive for people. Views and opinions are personal. Comments and criticism are most welcome.&lt;/p&gt;
+
+&lt;p&gt;May the Force be with you!&lt;/p&gt;</description>
                 <link>http://ananth99.github.io/2013/09/12/hello-world</link>
                 <guid>http://ananth99.github.io/2013/09/12/hello-world</guid>
                 <pubDate>2013-09-12T00:00:00+05:30</pubDate>
