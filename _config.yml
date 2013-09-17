@@ -9,15 +9,14 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Ananth Madhavan
-tagline: Site Tagline
+tagline: Ananth Madhavan
 author :
   name : Ananth Madhavan
   email : ananth@playerify.com
   github : ananth99
   twitter : AnanthMadhavan
   facebook : ananth.madhavan
-  linkedin : profile/view?id=133303876&trk=tab_pro
-
+  
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
