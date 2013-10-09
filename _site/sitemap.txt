@@ -1,14 +1,24 @@
 
-http://ananth99.github.io/categories.html
-http://ananth99.github.io/pages/about/index.html
-http://ananth99.github.io/index.html
-http://ananth99.github.io/rss.xml
-http://ananth99.github.io/sitemap.txt
-http://ananth99.github.io/tags.html
-http://ananth99.github.io/pages.html
-http://ananth99.github.io/atom.xml
-http://ananth99.github.io/archive.html
-http://ananth99.github.io/about.html
+/articles/index.html
+/categories.html
+/pages/about/index.html
+/index.html
+/rss.xml
+/sitemap.txt
+/tags.html
+/pages.html
+/404.html
+/atom.xml
+/feed.xml
+/archive.html
+/sitemap.xml
+/about/index.html
+/theme-setup/index.html
 
-http://ananth99.github.io/2013/09/12/hello-world
-http://ananth99.github.io/lessons/2011/12/29/jekyll-introduction
+/hello-world
+/articles/code-highlighting-post
+/articles/readability-feature-post
+/articles/sample-post-images
+/articles/readability-post
+/lessons/jekyll-introduction
+/articles/sample-post

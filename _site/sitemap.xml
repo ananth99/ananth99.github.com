@@ -6,6 +6,10 @@
     
     
     <url>
+        <loc>http://ananth99.github.io/hello-world</loc>
+    </url>
+    
+    <url>
         <loc>http://ananth99.github.io/articles/code-highlighting-post</loc>
     </url>
     
@@ -19,6 +23,10 @@
     
     <url>
         <loc>http://ananth99.github.io/articles/readability-post</loc>
+    </url>
+    
+    <url>
+        <loc>http://ananth99.github.io/lessons/jekyll-introduction</loc>
     </url>
     
     <url>
