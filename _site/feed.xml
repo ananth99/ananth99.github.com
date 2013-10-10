@@ -5,7 +5,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://ananth99.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://ananth99.github.io" />
-<updated>2013-10-10T00:31:57-04:00</updated>
+<updated>2013-10-10T04:41:24+00:00</updated>
 <id>http://ananth99.github.io/</id>
 <author>
   <name>Ananth</name>
@@ -18,8 +18,8 @@
   <title type="html"><![CDATA[Syntax Highlighting Post]]></title>
   <link rel="alternate" type="text/html" href="http://ananth99.github.io/articles/code-highlighting-post" />
   <id>http://ananth99.github.io/articles/code-highlighting-post</id>
-  <published>2013-08-16T00:00:00-04:00</published>
-  <updated>2013-08-16T00:00:00-04:00</updated>
+  <published>2013-08-16T00:00:00+00:00</published>
+  <updated>2013-08-16T00:00:00+00:00</updated>
   <author>
     <name>Ananth</name>
     <uri>http://ananth99.github.io</uri>
@@ -129,8 +129,8 @@ end
   <title type="html"><![CDATA[Post with Large Feature Image and Text]]></title>
   <link rel="alternate" type="text/html" href="http://ananth99.github.io/articles/readability-feature-post" />
   <id>http://ananth99.github.io/articles/readability-feature-post</id>
-  <published>2013-05-23T00:00:00-04:00</published>
-  <updated>2013-05-23T00:00:00-04:00</updated>
+  <published>2013-05-23T00:00:00+00:00</published>
+  <updated>2013-05-23T00:00:00+00:00</updated>
   <author>
     <name>Ananth</name>
     <uri>http://ananth99.github.io</uri>
@@ -193,8 +193,8 @@ end
   <title type="html"><![CDATA[A Post with Images]]></title>
   <link rel="alternate" type="text/html" href="http://ananth99.github.io/articles/sample-post-images" />
   <id>http://ananth99.github.io/articles/sample-post-images</id>
-  <published>2013-05-22T00:00:00-04:00</published>
-  <updated>2013-05-22T00:00:00-04:00</updated>
+  <published>2013-05-22T00:00:00+00:00</published>
+  <updated>2013-05-22T00:00:00+00:00</updated>
   <author>
     <name>Ananth</name>
     <uri>http://ananth99.github.io</uri>
@@ -259,8 +259,8 @@ end
   <title type="html"><![CDATA[Testing Readability with a Bunch of Text]]></title>
   <link rel="alternate" type="text/html" href="http://ananth99.github.io/articles/readability-post" />
   <id>http://ananth99.github.io/articles/readability-post</id>
-  <published>2012-05-22T00:00:00-04:00</published>
-  <updated>2012-05-22T00:00:00-04:00</updated>
+  <published>2012-05-22T00:00:00+00:00</published>
+  <updated>2012-05-22T00:00:00+00:00</updated>
   <author>
     <name>Ananth</name>
     <uri>http://ananth99.github.io</uri>
@@ -316,7 +316,7 @@ end
   <link rel="alternate" type="text/html" href="http://ananth99.github.io/articles/sample-post" />
   <id>http://ananth99.github.io/articles/sample-post</id>
   <updated>2013-05-31T00:00:00-00:00</updated>
-  <published>2011-03-10T00:00:00-05:00</published>
+  <published>2011-03-10T00:00:00+00:00</published>
   
   <author>
     <name>Ananth</name>
