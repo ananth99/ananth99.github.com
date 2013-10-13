@@ -1,12 +1,13 @@
 title:            Ananth Madhavan
 tagline:          Thinker
 description:      My personal Site.
+disqus_shortname: ananth
 #Comment out url when working locally to resolve base urls correctly
-url:              http://ananth99.github.io
+#url:              localhost:4000
 
 # Owner/author information
 owner:
-  name:           Ananth
+  name:           Ananth Madhavan
   avatar:         bio-photo.jpg
   bio:            Thinker,Hakcer, Builder, Open Source Enthusiast, Star Wars fanatic.
   email:          ananthmadhavan6@gmail.com
@@ -41,7 +42,7 @@ links:
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    India/New_Delhi
+timezone:    Asia/Kolkata
 future:      true
 pygments:    true
 markdown:    kramdown
