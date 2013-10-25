@@ -7,7 +7,8 @@ tags: [Databases, Startups]
 ---
 
 Repeat after me...
-"DATABASE MIGRATION IS AS IMPORTANT AS HAVING A VCS."
+
+####"DATABASE MIGRATION IS AS IMPORTANT AS HAVING A VCS."
 If you're a newbie who's into WebDev like me, the above mantra should be the 1st of your 108 mantras. 
 
 I'm currently working as a developer in a small startup. We're a team of four and we are working with the LAMP technology stack. Let me tell you why I'm writing this post..
