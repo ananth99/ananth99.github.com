@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">Hacking. Learning. Blogging.</title>
+<title type="text">Ananth Madhavan</title>
 <subtitle type="text"></subtitle>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2013-10-30T14:19:23+05:30</updated>
+<updated>2013-10-30T14:43:44+05:30</updated>
 <id>/</id>
 <author>
   <name>Ananth Madhavan</name>
@@ -38,7 +38,7 @@
 
 &lt;p&gt;May the Force be with You!&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/WebDev-Turmoil&quot;&gt;WebDev Turmoil&lt;/a&gt; was originally published by Ananth Madhavan at &lt;a href=&quot;&quot;&gt;Hacking. Learning. Blogging.&lt;/a&gt; on September 12, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/WebDev-Turmoil&quot;&gt;WebDev Turmoil&lt;/a&gt; was originally published by Ananth Madhavan at &lt;a href=&quot;&quot;&gt;Ananth Madhavan&lt;/a&gt; on September 12, 2013.&lt;/p&gt;</content>
 </entry>
 
 
@@ -69,7 +69,7 @@
 
 &lt;p&gt;May the Force be with you!&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/Broken-Window-Theory&quot;&gt;Broken Windows Theory&lt;/a&gt; was originally published by Ananth Madhavan at &lt;a href=&quot;&quot;&gt;Hacking. Learning. Blogging.&lt;/a&gt; on January 30, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/Broken-Window-Theory&quot;&gt;Broken Windows Theory&lt;/a&gt; was originally published by Ananth Madhavan at &lt;a href=&quot;&quot;&gt;Ananth Madhavan&lt;/a&gt; on January 30, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
