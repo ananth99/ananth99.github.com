@@ -11,7 +11,7 @@ modified: 9-9-2013
 Thanks for visiting my personal website. I'm glad that you decided to get to know me better.
 
 #### A quick summary...
-I'm basically a 21 year old who loves developing stuff, mostly web based and derive satisfaction from seeing people use it. At least, that's what I want to do. I appreciate good design and deify people who have a knack for creating good design. I have a passion for working with new technologies. I owe it **[Hacker News](http://www.hackernews.com)** for enlightening me with so many new and useful things. 
+I'm basically a 21 year old who loves developing stuff, mostly web based and derive satisfaction from seeing people use it. At least, that's what I want to do. I appreciate good design and deify people who have a knack for creating good design. I have a passion for working with new technologies. I owe it **[Hacker News](https://news.ycombinator.com/)** for enlightening me with so many new and useful things. 
 
 I follow this quote by **[Yoda](http://en.wikipedia.org/wiki/Yoda)**.
 
