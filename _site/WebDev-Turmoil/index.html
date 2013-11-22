@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <title>WebDev Turmoil &#8211; Ananth Madhavan</title>
 <meta name="description" content="Path of the Web Developer Episode I">
-<meta name="keywords" content="Databases, Startups">
+<meta name="keywords" content="Databases, Startups, Yii">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
@@ -113,11 +113,87 @@
       <p>Repeat after me…</p>
 
 <h4 id="database-migration-is-as-important-as-having-a-vcs">“DATABASE MIGRATION IS AS IMPORTANT AS HAVING A VCS.”</h4>
-<p>If you’re a newbie who’s into WebDev like me, the above mantra should be the 1st of your 108 mantras. </p>
+<p>If you’re a newbie who’s into WebDev like me, the above mantra should be the 1st one of your 108 mantras. </p>
 
 <p>I’m currently working as a developer in a small startup. We’re a team of four and we are working with the LAMP technology stack. Let me tell you why I’m writing this post..</p>
 
-<p>I did a feature implementation few days back and had created a couple of models and did a whole lot of tweaking in that process to the Database. Had this been just a code change which had to do with the Controllers or Views, we could’ve easily version-ed the code using GIT or any other VCS. But this Database tweak needed a Migration to be done and we didn’t have that in our code. Result? I pushed my code yesterday and my boss is still finding out the differences in the Database. We are due to do a Beta Release by EOD today and at this rate I think it’s highly unlikely that it’ll happen. So here I am, sitting at my desk just blinking at the monitor for the last four hours, ranting why it’s a thumb rule or a best practice to create a Migration immediately after you create your Database.</p>
+<p>I did a feature implementation few days back and had created a couple of models and did a whole lot of tweaking in that process to the Database. Had this been just a code change which had to do with the Controllers or Views, we could’ve easily version-ed the code using <em><a href="http://git-scm.com/">git</a></em> or any other <em><a href="http://en.wikipedia.org/wiki/Revision_control">vcs</a></em>. But this Database tweak needed a Migration to be done and we didn’t have that in our code. Result? I pushed my code yesterday and my boss is still finding out the differences in the Database. We are due to do a Beta Release by EOD today and at this rate I think it’s highly unlikely that it’ll happen. So here I am, sitting at my desk just blinking at the monitor for the last four hours, ranting why it’s a thumb rule or a best practice to create a Migration immediately after you come up with your schema.</p>
+
+<h4 id="update">Update</h4>
+
+<p>I’ve tried to explain on how to create a Migration for your App that is developed using the <em><a href="www.yiiframework.com">Yii Framework</a></em>.</p>
+
+<p>To start off with, let’s define the Thumb Rule in Database Migration. Any change(creating a table, removing a column, adding column constraints etc etc), that needs to be done to the existing structure of the Database, needs to be versioned. That said, let’s look into some code snippets to understand this better. Let’s assume that we have 2 developers A and B who are working on an exciting product. </p>
+
+<h5 id="scenario">Scenario</h5>
+
+<p>A wants to create a new table. So, he opens his terminal and keys in the following code.</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate create add_demo_table
+</code></pre></div>
+
+<p>The code creates a skeleton of the Migration he wishes to create.</p>
+
+<h6 id="m131122184424adddemotablephp">m131122_184424_add_demo_table.php</h6>
+
+<div class="highlight"><pre><code class="vim"><span class="p">&lt;</span>?php
+class m131122_184424_add_demo_table extends CDbMigration
+{
+	public <span class="k">function</span> <span class="k">up</span><span class="p">()</span>
+	{
+	}
+
+	public <span class="k">function</span> down<span class="p">()</span>
+	{
+		echo <span class="s2">&quot;m131122_184424_add_demo_table does not support migration down.\n&quot;</span>;
+		<span class="k">return</span> false;
+	}
+
+	/*
+	<span class="sr">//</span> Use safeUp/safeDown <span class="k">to</span> <span class="k">do</span> migration with transaction
+	public <span class="k">function</span> safeUp<span class="p">()</span>
+	{
+	}
+
+	public <span class="k">function</span> safeDown<span class="p">()</span>
+	{
+	}
+	*/
+}
+?<span class="p">&gt;</span>
+</code></pre></div>
+
+<p>The naming is the essential part since the Database is versioned according to the time the migration is created. Now A can write his create table statements inside the up() function or the safeUp() function like this:</p>
+
+<div class="highlight"><pre><code class="vim">$this<span class="p">-&gt;</span>createTable<span class="p">(</span><span class="s2">&quot;demo_table&quot;</span><span class="p">,</span>array<span class="p">(</span>
+	<span class="s1">&#39;id&#39;</span><span class="p">=&gt;</span><span class="s1">&#39;integer not null&#39;</span><span class="p">,</span>
+	<span class="s1">&#39;name&#39;</span><span class="p">=&gt;</span><span class="s1">&#39;varchar(255) not null&#39;</span><span class="p">,</span>
+	<span class="s1">&#39;primary key(id)&#39;</span><span class="p">,</span>
+	<span class="p">)</span>
+<span class="p">)</span>;
+</code></pre></div>
+
+<p>So, now, if B wants to add a column to this table the next day, he simply creates another migration like this:</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate create add_column_to_demo_table
+</code></pre></div>
+
+<p>Thus all your Database tweaking is essentially version controlled! Now, if C joins the team, all he has to do is to copy all the migration files
+and fire this command in the terminal:</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate <span class="k">up</span>
+</code></pre></div>
+
+<p>Voila! He now has the most recent version of the Database. It’s that simple. :-)</p>
+
+<p>To undo the last migrate operation:</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate down
+</code></pre></div>
+
+<p>The above command just invokes the down() or the safeDown() method which generally contains drop table commands.</p>
+
+<p>Note that when you’re firing the terminal commands, make sure inside the protected folder. Otherwise, the yiic migrate tool won’t work.</p>
 
 <p>Almost every framework today, supports Migration. So, whichever framework you’re working on, make sure you create and update your Migration whenever you play around with your Database. Happy developing!  </p>
 
