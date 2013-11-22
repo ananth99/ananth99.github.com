@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Broken Windows Theory"
-description: ""
+description: "#RandomRant"
 category:
 tags: [India, Hygiene]
 ---
