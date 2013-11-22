@@ -93,7 +93,7 @@ $php yiic migrate down
 
 The above command just invokes the down() or the safeDown() method which generally contains drop table commands.
 
-Note that when you're firing the terminal commands, make sure inside the protected folder. Otherwise, the yiic migrate tool won't work.
+Note that when you're firing the terminal commands, make sure you're inside the protected folder. Otherwise, the yiic migrate tool won't work.
 
 Almost every framework today, supports Migration. So, whichever framework you're working on, make sure you create and update your Migration whenever you play around with your Database. Happy developing!  
 
