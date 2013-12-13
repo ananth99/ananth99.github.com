@@ -1,5 +1,6 @@
 ---
 layout: home
-description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+description: "A Static website for Treta Constructions"
+title: Treta Constructions
+tags: [Treta, theme, responsive, template]
 ---
