@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Ananth Madhavan</title>
+    <link>http://ananth99.github.io</link>
+    <description>Thoughts and Ideas</description>
+    <pubDate>Thu, 12 Sep 2013 00:00:00 +0530</pubDate>
+    <item>
+      <title>WebDev Turmoil</title>
+      <link>http://ananth99.github.io/2013/09/12/WebDev-Turmoil/</link>
+      <description>&lt;p&gt;Repeat after me...&lt;/p&gt;
+</description>
+      <pubDate>Thu, 12 Sep 2013 00:00:00 +0530</pubDate>
+      <dc:date>2013-09-12T00:00:00+05:30</dc:date>
+    </item>
+    <item>
+      <title>Broken Windows Theory</title>
+      <link>http://ananth99.github.io/2013/01/30/Broken-Window-Theory/</link>
+      <description>&lt;p&gt;I recently stumbled upon a very interesting theory in the Internet. It&amp;#39;s called the &lt;a href=&quot;http://en.wikipedia.org/wiki/Broken_windows_theory&quot;&gt;Broken windows theory&lt;/a&gt;.  To put it in a nut-shell, this theory states that maintaining and monitoring urban environments in a well-ordered condition may stop further vandalism and escalation into more serious crime. So, yeah, this post is about my view on this peculiar theory. Read on!&lt;/p&gt;
+</description>
+      <pubDate>Wed, 30 Jan 2013 00:00:00 +0530</pubDate>
+      <dc:date>2013-01-30T00:00:00+05:30</dc:date>
+    </item>
+    <dc:date>2013-09-12T00:00:00+05:30</dc:date>
+  </channel>
+</rss>

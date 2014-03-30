@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Ananth Madhavan - Thoughts and Ideas</title>
+    <meta name="description" content="Ananth Madhavan, Thoughts and Ideas" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <!-- This is for syntax highlight -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body class="home-template">
+    
+    <main class="content" role="main">
+
+    <article class="post">
+        <header class="post-header">
+            <a id="blog-logo" href="/">
+                
+                    <span class="blog-title">Ananth Madhavan</span>
+                 
+            </a>
+        </header>
+        
+        <span class="post-meta">
+        	<time datetime="2013-09-12">12 Sep 2013</time>
+        	
+        		on
+	        	
+	        
+       	</span>
+
+        <h1 class="post-title">WebDev Turmoil</h1>
+
+        <section class="post-content">
+            <p>Repeat after me...</p>
+
+<h4>&quot;DATABASE MIGRATION IS AS IMPORTANT AS HAVING A VCS.&quot;</h4>
+
+<p>If you&#39;re a newbie who&#39;s into WebDev like me, the above mantra should be the 1st one of your 108 mantras. </p>
+
+<p>I&#39;m currently working as a developer in a small startup. We&#39;re a team of four and we are working with the LAMP technology stack. Let me tell you why I&#39;m writing this post..</p>
+
+<p>I did a feature implementation few days back and had created a couple of models and did a whole lot of tweaking in that process to the Database. Had this been just a code change which had to do with the Controllers or Views, we could&#39;ve easily version-ed the code using <em><a href="http://git-scm.com/">git</a></em> or any other <em><a href="http://en.wikipedia.org/wiki/Revision_control">vcs</a></em>. But this Database tweak needed a Migration to be done and we didn&#39;t have that in our code. Result? I pushed my code yesterday and my boss is still finding out the differences in the Database. We are due to do a Beta Release by EOD today and at this rate I think it&#39;s highly unlikely that it&#39;ll happen. So here I am, sitting at my desk just blinking at the monitor for the last four hours, ranting why it&#39;s a thumb rule or a best practice to create a Migration immediately after you come up with your schema.</p>
+
+<h4>Update</h4>
+
+<p>I&#39;ve tried to explain on how to create a Migration for your App that is developed using the <em><a href="www.yiiframework.com">Yii Framework</a></em>.</p>
+
+<p>To start off with, let&#39;s define the Thumb Rule in Database Migration. Any change(creating a table, removing a column, adding column constraints etc etc), that needs to be done to the existing structure of the Database, needs to be versioned. That said, let&#39;s look into some code snippets to understand this better. Let&#39;s assume that we have 2 developers A and B who are working on an exciting product. </p>
+
+<h5>Scenario</h5>
+
+<p>A wants to create a new table. So, he opens his terminal and keys in the following code.</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate create add_demo_table
+</code></pre></div>
+
+<p>The code creates a skeleton of the Migration he wishes to create.</p>
+
+<h6>m131122<em>184424</em>add<em>demo</em>table.php</h6>
+
+<div class="highlight"><pre><code class="vim"><span class="p">&lt;</span>?php
+class m131122_184424_add_demo_table extends CDbMigration
+{
+    public <span class="k">function</span> <span class="k">up</span><span class="p">()</span>
+    {
+    }
+
+    public <span class="k">function</span> down<span class="p">()</span>
+    {
+        echo <span class="s2">&quot;m131122_184424_add_demo_table does not support migration down.\n&quot;</span>;
+        <span class="k">return</span> false;
+    }
+
+    /*
+    <span class="sr">//</span> Use safeUp/safeDown <span class="k">to</span> <span class="k">do</span> migration with transaction
+    public <span class="k">function</span> safeUp<span class="p">()</span>
+    {
+    }
+
+    public <span class="k">function</span> safeDown<span class="p">()</span>
+    {
+    }
+    */
+}
+?<span class="p">&gt;</span>
+</code></pre></div>
+
+<p>The naming is the essential part since the Database is versioned according to the time the migration is created. Now A can write his create table statements inside the up() function or the safeUp() function like this:</p>
+
+<div class="highlight"><pre><code class="vim">$this<span class="p">-&gt;</span>createTable<span class="p">(</span><span class="s2">&quot;demo_table&quot;</span><span class="p">,</span>array<span class="p">(</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">=&gt;</span><span class="s1">&#39;integer not null&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">=&gt;</span><span class="s1">&#39;varchar(255) not null&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;primary key(id)&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>;
+</code></pre></div>
+
+<p>So, now, if B wants to add a column to this table the next day, he simply creates another migration like this:</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate create add_column_to_demo_table
+</code></pre></div>
+
+<p>Thus all your Database tweaking is essentially version controlled! Now, if C joins the team, all he has to do is to copy all the migration files
+and fire this command in the terminal:</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate <span class="k">up</span>
+</code></pre></div>
+
+<p>Voila! He now has the most recent version of the Database. It&#39;s that simple. :-)</p>
+
+<p>To undo the last migrate operation:</p>
+
+<div class="highlight"><pre><code class="vim">$php yiic migrate down
+</code></pre></div>
+
+<p>The above command just invokes the down() or the safeDown() method which generally contains drop table commands.</p>
+
+<p>Note that when you&#39;re firing the terminal commands, make sure you&#39;re inside the protected folder. Otherwise, the yiic migrate tool won&#39;t work.</p>
+
+<p>Almost every framework today, supports Migration. So, whichever framework you&#39;re working on, make sure you create and update your Migration whenever you play around with your Database. Happy developing!  </p>
+
+<p>May the Force be with You!</p>
+
+        </section>
+
+        
+
+        <footer class="post-footer">
+        	<!-- If we want to display author's name and bio -->
+            
+                <section class="author">
+                	<header> <a href="/"> <img class="profile" src="/assets/images/bio-photo.jpg" alt="Author's profile picture"></a></header>
+                	<article>
+                		<!-- Author Name -->
+                    	<h4> Ananth Madhavan </h4>
+                    	<!-- Author Bio -->
+                    	<p> 
+                    		Here goes the author description. You might want to place some links too in here
+                    	</p>
+                    </article>
+                </section>                
+            
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="http://twitter.com/share?text=WebDev Turmoil&amp;url=http://ananth99.github.io/2013/09/12/WebDev-Turmoil/"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://ananth99.github.io/2013/09/12/WebDev-Turmoil/"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://ananth99.github.io/2013/09/12/WebDev-Turmoil/"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+            
+            
+                <section class="disqus">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+
+          var disqus_shortname = 'ananth'; 
+      	var disqus_developer = 0; // developer mode is on
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+            
+        	
+        </footer>
+
+    </article>
+
+</main>
+
+
+    <footer class="site-footer">
+        <a class="subscribe icon-feed" href="/rss.xml"><span class="tooltip">Subscribe!</span></a>
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="/">Ananth Madhavan</a> &copy;  &bull; All rights reserved.</section>
+             <section class="poweredby">Made with Jekyll using <a href="http://github.com/rosario/kasper">Kasper theme</a></section>
+        </div>
+    </footer>
+
+    
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>   
+</body>
+</html>

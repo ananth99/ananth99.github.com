@@ -1,0 +1,20 @@
+name: Ananth Madhavan
+description: Thoughts and Ideas
+meta_description: "Ananth Madhavan, Thoughts and Ideas"
+disqus_shortname: ananth
+permalink: pretty
+#Personal Information
+email:          ananthmadhavan6@gmail.com
+twitter:        AnanthMadhavan
+facebook:       ananth.madhavan
+github:         ananth99
+timezone: Asia/Kolkata
+
+markdown: redcarpet
+pygments: true
+logo: false
+paginate: 5
+
+# Details for the RSS feed generator
+url:            'http://ananth99.github.io'
+author:         'Ananth Madhavan'
