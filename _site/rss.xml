@@ -8,7 +8,15 @@
     <title>Ananth Madhavan</title>
     <link>http://ananth99.github.io</link>
     <description>Thoughts and Ideas</description>
-    <pubDate>Thu, 12 Sep 2013 00:00:00 +0530</pubDate>
+    <pubDate>Mon, 31 Mar 2014 00:00:00 +0530</pubDate>
+    <item>
+      <title>LARAVEL. Neat and Classy.</title>
+      <link>http://ananth99.github.io/2014/03/31/LARAVEL.-Neat-and-Classy/</link>
+      <description>&lt;p&gt;Recently, I got an opportunity to work on this PHP framework called &lt;a href=&quot;http://laravel.com&quot;&gt;Laravel 4&lt;/a&gt;. This post is about my experiences with the framework.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 31 Mar 2014 00:00:00 +0530</pubDate>
+      <dc:date>2014-03-31T00:00:00+05:30</dc:date>
+    </item>
     <item>
       <title>WebDev Turmoil</title>
       <link>http://ananth99.github.io/2013/09/12/WebDev-Turmoil/</link>
@@ -25,6 +33,6 @@
       <pubDate>Wed, 30 Jan 2013 00:00:00 +0530</pubDate>
       <dc:date>2013-01-30T00:00:00+05:30</dc:date>
     </item>
-    <dc:date>2013-09-12T00:00:00+05:30</dc:date>
+    <dc:date>2014-03-31T00:00:00+05:30</dc:date>
   </channel>
 </rss>
