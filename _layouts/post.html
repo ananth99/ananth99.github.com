@@ -32,6 +32,8 @@ archive: false
         <section class="post-content">
             {{content}}
         </section>
+
+        <div class="kudos" data-amount="0" data-url="ananth99.github.io{{ page.url }}"></div>
         
         {% if page.archive %}
         <section class="archive">
@@ -79,7 +81,20 @@ archive: false
             {% if page.disqus %}
                 {% include disqus.html %}
             {% endif %}
-        	
+        	<!-- Implementing kudos. -->
+            <script src="/assets/js/kudosplease-min.js"></script>
+            <script type="text/javascript">
+                new KudosPlease({ 
+                    el : '.kudos',
+                    duration : 1500,
+                    persistent : true,
+                    status : {
+                      alpha: 'fontelico-emo-shoot',
+                      beta: 'fontelico-emo-shoot',
+                      gamma: 'fontelico-emo-beer'
+                    }
+                });
+            </script>
         </footer>
     </article>
 </main>

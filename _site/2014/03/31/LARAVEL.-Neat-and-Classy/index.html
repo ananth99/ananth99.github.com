@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
     <!-- Customisation  -->
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/kudosplease-min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -77,6 +78,8 @@
 <p>May the Force be with you!</p>
 
         </section>
+
+        <div class="kudos" data-amount="0" data-url="ananth99.github.io/2014/03/31/LARAVEL.-Neat-and-Classy/"></div>
         
         
 
@@ -129,7 +132,20 @@
       <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
             
-        	
+        	<!-- Implementing kudos. -->
+            <script src="/assets/js/kudosplease-min.js"></script>
+            <script type="text/javascript">
+                new KudosPlease({ 
+                    el : '.kudos',
+                    duration : 1500,
+                    persistent : true,
+                    status : {
+                      alpha: 'fontelico-emo-shoot',
+                      beta: 'fontelico-emo-shoot',
+                      gamma: 'fontelico-emo-beer'
+                    }
+                });
+            </script>
         </footer>
     </article>
 </main>
