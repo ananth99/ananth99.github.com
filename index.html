@@ -4,8 +4,8 @@ title: Home
 cover: /assets/images/cover.jpg
 about: about/
 ---
-
 <header class="site-head" {% if page.cover %} style="background-image: url({{ page.cover }})"{% endif %}>
+
     <div class="vertical">
         <div class="site-head-content" class="inner">
             {% if page.logo %}
@@ -20,6 +20,15 @@ about: about/
                 {{ site.description }}. 
                 {% if page.about %} <a href="{{page.about}}"> About me </a> {% endif %}
             </h2>
+            <br>
+            <div>
+                <a  class="genericon genericon-facebook social-buttons float"href="http://www.facebook.com/ananth.madhavan"></a>&nbsp;
+                
+                <a class="genericon genericon-twitter social-buttons float" href="http://twitter.com/AnanthMadhavan"></a>&nbsp;
+
+                <a class="genericon genericon-github social-buttons float" href="http://github.com/ananth99"></a>
+
+            </div>
         </div>
     </div>
 </header>

@@ -39,3 +39,11 @@ img.profile-main{
 	border-radius: 80px;
 }
 
+.social-buttons{
+	text-shadow: none;
+	font-size: 2.0rem;
+}
+
+.social-buttons:hover{
+
+}
