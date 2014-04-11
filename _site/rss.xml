@@ -8,7 +8,15 @@
     <title>Ananth Madhavan</title>
     <link>http://ananth99.github.io</link>
     <description>Thoughts and Ideas</description>
-    <pubDate>Mon, 31 Mar 2014 00:00:00 +0530</pubDate>
+    <pubDate>Fri, 11 Apr 2014 00:00:00 +0530</pubDate>
+    <item>
+      <title>Everything Under One Roof</title>
+      <link>http://ananth99.github.io/2014/04/11/Everything-Under-One-Roof/</link>
+      <description>&lt;p&gt;First of all, excuse me for the title of the post. I know it sounds a bit too old school and cliched. But, I think it makes sense. Read on.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 11 Apr 2014 00:00:00 +0530</pubDate>
+      <dc:date>2014-04-11T00:00:00+05:30</dc:date>
+    </item>
     <item>
       <title>LARAVEL. Neat and Classy.</title>
       <link>http://ananth99.github.io/2014/03/31/LARAVEL.-Neat-and-Classy/</link>
@@ -33,6 +41,6 @@
       <pubDate>Wed, 30 Jan 2013 00:00:00 +0530</pubDate>
       <dc:date>2013-01-30T00:00:00+05:30</dc:date>
     </item>
-    <dc:date>2014-03-31T00:00:00+05:30</dc:date>
+    <dc:date>2014-04-11T00:00:00+05:30</dc:date>
   </channel>
 </rss>
