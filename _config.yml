@@ -16,8 +16,8 @@ logo: false
 paginate: 5
 
 # Details for the RSS feed generator
-url:            'http://ananth99.github.io'
-author:         'Ananth Madhavan'
+url: http://ananth99.github.io
+author: Ananth Madhavan
 
 #Analytics
-google_analytics: "UA-44726339-1"
+google_analytics: "UA-44726339-1" 
