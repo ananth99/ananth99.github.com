@@ -8,10 +8,11 @@ Thanks for visiting my personal website. I'm glad that you decided to get to kno
 ##### A quick summary...
 I'm a 22 year old who loves building stuff, mostly web based and derive satisfaction from seeing people use it. At least, that's what I want to do. I appreciate good design and deify people who have a knack for creating good design. I have a passion for working with new technologies and I'm an out-and-out *[minimalist](http://dictionary.reference.com/browse/minimalist)*. I owe it to **[Hacker News](https://news.ycombinator.com/)** for enlightening me with so many new and useful things. 
 
-I try to follow this quote by **[ Master Yoda](http://en.wikipedia.org/wiki/Yoda)**.
-> "Try not. Do, or do not. There is no try."
+*[Sourav Ganguly](http://en.wikipedia.org/wiki/Sourav_Ganguly)* & *[Steve Jobs](http://en.wikipedia.org/wiki/Steve_Jobs)* are my biggest inflencers. These two videos are my all time favorites of them.
 
-Cricket runs in my blood and **[Sourav Ganguly](http://en.wikipedia.org/wiki/Sourav_Ganguly)** has been my biggest inspiration ever since I started following the sport. You would find me either in a local play ground or playing Terrace Cricket with a bunch of awesome people during weekends. 
+<iframe width="420" height="315" src="//www.youtube.com/embed/-z4NS2zdrZc" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/72MA36alfIM" frameborder="0" allowfullscreen></iframe>
 
 ##### What you can find here...
 
